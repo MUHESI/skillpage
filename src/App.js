@@ -14,7 +14,8 @@ import { Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
 function App() {
   return (
     <div className="m-3">
-      <Counter value="Counter :" value={1} image="img/Profiler1.jpg" />
+      <Counter title="mon titre" value={1} image="img/Profile1.jpg" />
+      <Counter title="mon chat" value={1} image="img/Profile2.jpg" />
     </div>
   );
 }

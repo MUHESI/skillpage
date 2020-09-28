@@ -12,7 +12,11 @@ class Counter extends Component {
     };
   }
   compute = (op) => {
-    let c = this.state.counter + 1;
+    let sign = op === "+" ? 1 : -1; // ici on affecte la valeur a "sign" selon la valeur de "op"
+    // si "op = + " alors sign est 1 sinon -1
+    if (this.state.counter == 1 && op == "-") sign = 0;
+
+    let c = this.state.counter + sign;
     this.setState({
       counter: c,
       list: new Array(c).fill(0),
@@ -29,26 +33,31 @@ class Counter extends Component {
         </div>
         <div className="ml-auto">
           <button
-            onClick={() => this.compute("op", "+")}
+            onClick={() => this.compute("+")}
             className="btn btn-primary m-2"
           >
             +
           </button>
           <button
-            onClick={() => this.componentDidUpdate("op", "-")}
+            onClick={() => this.compute("-")}
             className="btn btn-primary m-2"
           >
             -
           </button>
         </div>
         <div className="card-body">
-          {this.state.map((v, index) => (
+          {this.state.list.map((v, index) => (
             <img width={100} src={this.props.image} />
           ))}
-          <img width={100} src={this.props.image} />
         </div>
       </div>
     );
   }
 }
 export default Counter;
+
+// {
+//this.state.map((v, index) => (
+// <img width={100} src={this.props.image} />
+//));
+// }
