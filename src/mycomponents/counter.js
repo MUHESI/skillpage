@@ -54,6 +54,7 @@ class Counter extends Component {
     );
   }
 }
+//export default Counter2;
 export default Counter;
 
 // {
