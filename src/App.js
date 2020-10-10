@@ -1,12 +1,14 @@
-import React, { Profiler } from "react";
+import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import "./bootstrap.min.css";
+import { Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
+
 import Counter from "./mycomponents/counter";
 import Home from "./mycomponents/home";
-import Gallery from "./mycomponents/gallery";
+import { Gallery, NewClass } from "./mycomponents/gallery";
 
-import { Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
+//import { Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
 //import 'bootstrap/dist/css/bootstrap.min.css';
 
 // { }
@@ -36,18 +38,23 @@ function App() {
           </li>
           <li>
             <Link className="nav-link" to="/gallery">
+              NewComponent
+            </Link>
+          </li>
+          <li>
+            <Link className="nav-link" to="/gallery">
               gallery
             </Link>
           </li>
         </ul>
       </nav>
-      <div className="container-fluid">
-        <Switch>
-          <Route path="/home" component={Home}></Route>
-          <Route path="/counter" component={Counter}></Route>
-          <Route path="/gallery" component={Gallery}></Route>
-        </Switch>
-      </div>
+      <Switch>
+        <Route path="/home" component={Home}></Route>
+        <Route path="/counter" component={Counter}></Route>
+        <Route path="/gallery" component={NewClass}></Route>
+
+        <Route path="/gallery" component={Gallery}></Route>
+      </Switch>
     </Router>
   );
 }

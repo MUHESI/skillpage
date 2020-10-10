@@ -15,7 +15,6 @@ class Counter extends Component {
     let sign = op === "+" ? 1 : -1; // ici on affecte la valeur a "sign" selon la valeur de "op"
     // si "op = + " alors sign est 1 sinon -1
     if (this.state.counter == 1 && op == "-") sign = 0;
-
     let c = this.state.counter + sign;
     this.setState({
       counter: c,
