@@ -6,6 +6,8 @@ import { Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
 
 import Counter from "./mycomponents/counter";
 import Home from "./mycomponents/home";
+import About from "./mycomponents/about";
+
 import { Gallery, NewClass } from "./mycomponents/gallery";
 
 //import { Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
@@ -28,7 +30,7 @@ function App() {
           </li>
           <li>
             <Link className="nav-link" to="/about">
-              about
+              About
             </Link>
           </li>
           <li>
@@ -43,7 +45,7 @@ function App() {
           </li>
           <li>
             <Link className="nav-link" to="/gallery">
-              gallery
+              Gallery
             </Link>
           </li>
         </ul>
@@ -51,6 +53,8 @@ function App() {
       <Switch>
         <Route path="/home" component={Home}></Route>
         <Route path="/counter" component={Counter}></Route>
+        <Route path="/about" component={About}></Route>
+
         <Route path="/gallery" component={NewClass}></Route>
 
         <Route path="/gallery" component={Gallery}></Route>
@@ -58,5 +62,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;
