@@ -40,6 +40,24 @@ class About extends Component {
             </div>
           </div>
         </div>
+
+        <div className="card m-2">
+          <div className="card-header">Skills</div>
+          <div className="card-body">
+            <table className="table">
+              <tr>
+                <th>ID</th>
+                <th>Skill</th>
+              </tr>
+              {this.state.skills.map((s, index) => (
+                <tr>
+                  <td>{s.id}</td>
+                  <td>{s.skill}</td>
+                </tr>
+              ))}
+            </table>
+          </div>
+        </div>
       </div>
     );
   }
