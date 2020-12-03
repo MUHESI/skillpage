@@ -1,5 +1,124 @@
-.back {
-  background-color: #1e2355;
+body {
+  /*----variable for menu--*/
+
+  --bgPrimary: #121e58;
+  --colYellow: #d9be1b;
+  --colLiknHover: red;
+
+  --sectionTitleImg: "%PUBLIC_URL%/img/sectionTitle.PNG";
+
+  /*background-image:url("");*/
+  /*background-image:opacity(0.5);*/
+  /*------------------------------------------------------*/
+  background-image: url var(--sectionTitleImg);
+  background-image: url("%PUBLIC_URL%/img/sectionTitle.PNG");
+}
+.backg-primary {
+  /* #pour produire un background 'blue'>>par defaut ;*/
+  background: var(--bgPrimary);
+}
+.navbar a {
+  transition: 0.8s;
   color: white;
-  font-size: 0.4em;
+}
+.navbar a:hover {
+  transition: 0.5s;
+  color: var(--colLiknHover);
+}
+.navbar a {
+  transition: 0.8s;
+  color: white;
+}
+.dropdown-menu a {
+  color: black;
+}
+.br-buttom {
+  /* #pour produire un boder buttom 'jaune'>>par defaut ;*/
+  border-bottom: 2px solid var(--colYellow);
+}
+.text-bold {
+  color: red;
+  font-weight: bold;
+}
+
+.br-rect {
+  /*  #pour produire un boder rectangulaire 'jaune'>>par defaut ;*/
+  border: 1px solid var(--colYellow);
+}
+/*-------------------------------------*/
+.section-title {
+  /*  #pour prodire un boder rectangulaire 'jaune'>>par defaut ;*/
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.section-title h2 {
+  color: var(--bgPrimary);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.section-title .body {
+  color: var(--bgPrimary);
+  font-weight: bold;
+}
+.section-title button {
+}
+/* Expertise domaine  */
+.divExpertiseDomaine {
+  padding: 1% 2% 1% 2%;
+  color: white;
+}
+.divExpertiseDomaine ul {
+  padding: 0%;
+  font-size: 0.9em;
+}
+
+.divExpertiseDomaine .tilte h2 {
+  color: var(--colYellow);
+  font-size: 1em;
+  font-weight: bold;
+}
+.divExpertiseDomaine h3 {
+  color: var(--colYellow);
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+/*  Creation buttons */
+.btn {
+  --bgLight: #dbdbdb;
+  --bgLightHover: #fffefe;
+  --transitionHover: 0.5s;
+  --ColoryelloBut: #c2a526;
+  --ColoryelloButHover: #8b7617;
+
+  padding: 0 8px 0 8px; /*padding:0 5px 0 5px; >>means 0:top 5px:right 0:bottun 5px: left*/
+  margin: 2px;
+  transition: var(--transitionHover);
+  font-weight: bold;
+  font-size: 0.8em;
+}
+.btn-colorPrimary {
+  color: var(--bgPrimary);
+  border: 1px solid var(--colYellow);
+  background-color: var(--bgLight);
+}
+.btn-colorPrimary:hover,
+.btn-colorPrimary:active,
+.btn-colorPrimary:focus {
+  transition: var(--transitionHover);
+  color: var(--bgPrimary);
+  background-color: var(--bgPrimaryHover);
+}
+.btn-colorYellow {
+  color: var(--bgLightHover);
+  border: 1px solid var(--ColoryelloBut);
+  background-color: var(--colYellow);
+}
+.btn-colorYellow:hover,
+.btn-colorYellow:active,
+.btn-colorYellow:focus {
+  transition: var(--transitionHover);
+  color: var(--bgLightHover);
+
+  background-color: var(--ColoryelloButHover);
 }
