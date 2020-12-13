@@ -75,7 +75,7 @@ class ExpertiseDomaine extends Component {
             <div className="row">
               <div class="col-sm-6 col-md-6 col-lg-6">
                 <ul>
-                  {this.state.listDomExp1.map((elt) => (
+                  {this.state.listDomExp1.map((elt, v) => (
                     <li>{elt.nom} </li>
                   ))}
                 </ul>

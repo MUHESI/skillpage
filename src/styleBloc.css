@@ -50,6 +50,11 @@ body {
   /* #pour produire un background 'blue'>>par defaut ;*/
   background: var(--bgPrimary);
 }
+.backg-light {
+  /* #pour produire un background 'blue'>>par defaut ;*/
+  background: var(--bgPrimary);
+  background: white;
+}
 
 .hidding {
   -moz-column-rule: 1px solid #ccc;
