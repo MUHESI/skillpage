@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class SectionTitle extends Component {
   render() {
     return (
-      <div className="section-title">
+      <div className="info info-A">
         <div className="row">
           <div className="col-6"></div>
           <div className="col-6 marg-top-1">
@@ -28,11 +28,42 @@ class SectionTitle extends Component {
   }
 }
 export default SectionTitle;
-
+// ()   []  { }
 class ExpertiseDomaine extends Component {
+  state = {
+    listDomExp1: [
+      { id: 1, nom: "Accomgnement academiques et entrepreneurial" },
+      { id: 2, nom: "Developpement des produits" },
+      { id: 3, nom: "Encadrement des jeunes en science moderne" },
+    ],
+
+    listDomExp2: [
+      {
+        id: 1,
+        nom:
+          "Formation en hautes technologies et recherche scientifiques appliquéel",
+      },
+      { id: 2, nom: "Vulgarisation scientifique" },
+      { id: 3, nom: "Genie conseil et support" },
+    ],
+    listMissionCres: [
+      { id: 1, nom: "Accomgnement academiques et entrepreneurial" },
+      { id: 2, nom: "Developpement des produits" },
+      { id: 3, nom: "Encadrement des jeunes en science moderne" },
+    ],
+    listVisionCres: [
+      {
+        id: 1,
+        nom:
+          "Formation en hautes technologies et recherche scientifiques appliquée",
+      },
+      { id: 2, nom: "Vulgarisation scientifique" },
+      { id: 3, nom: "Genie conseil et support" },
+    ],
+  };
   render() {
     return (
-      <div className="divExpertiseDomaine backg-primary">
+      <div className="bloc bloc-primary">
         <div className="row">
           <div class="col-sm-6 col-md-6 col-lg-6">
             <div className="tilte">
@@ -44,19 +75,16 @@ class ExpertiseDomaine extends Component {
             <div className="row">
               <div class="col-sm-6 col-md-6 col-lg-6">
                 <ul>
-                  <li>Accomgnement academiques et entrepreneurial</li>
-                  <li>Developpement des produits</li>
-                  <li>Encadrement des jeunes en science moderne</li>
+                  {this.state.listDomExp1.map((elt) => (
+                    <li>{elt.nom} </li>
+                  ))}
                 </ul>
               </div>
               <div class="col-sm-6 col-md-6 col-lg-6">
                 <ul>
-                  <li>
-                    Formation en hautes technologies et recherche scientifiques
-                    appliquée
-                  </li>
-                  <li>Vulgarisation scientifique</li>
-                  <li>Genie conseil et support</li>
+                  {this.state.listDomExp2.map((elt) => (
+                    <li>{elt.nom} </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -72,9 +100,9 @@ class ExpertiseDomaine extends Component {
               <div class="col-sm-6 col-md-6 col-lg-6">
                 <h3>Mission</h3>
                 <ul>
-                  <li>Accomgnement academiques et entrepreneurial</li>
-                  <li>Developpement des produits</li>
-                  <li>Encadrement des jeunes en science moderne</li>
+                  {this.state.listMissionCres.map((elt) => (
+                    <li>{elt.nom} </li>
+                  ))}
                 </ul>
                 <div className="">
                   <button className="btn btn-colorYellow">
@@ -86,12 +114,9 @@ class ExpertiseDomaine extends Component {
                 <h3>Vision</h3>
 
                 <ul>
-                  <li>
-                    Formation en hautes technologies et recherche scientifiques
-                    appliquée
-                  </li>
-                  <li>Vulgarisation scientifique</li>
-                  <li>Genie conseil et support</li>
+                  {this.state.listVisionCres.map((elt) => (
+                    <li>{elt.nom} </li>
+                  ))}
                 </ul>
               </div>
             </div>

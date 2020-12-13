@@ -19,7 +19,7 @@ class Menu extends Component {
     return (
       <div className="">
         <Router>
-          <nav class="navbar navbar-expand-lg br-yellow backg-primary br-buttom">
+          <nav class="navbar navbar-expand-lg br-yellow backg-primary br-buttom ml-auto ">
             <a class="navbar-brand text-bold" href="#">
               CRES
             </a>
@@ -34,7 +34,8 @@ class Menu extends Component {
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+            <div class="collapse navbar-collapse " id="navbarNavDropdown">
               <ul class="navbar-nav">
                 <li class="nav-item active">
                   <Link className="nav-link" to="/home">
@@ -137,6 +138,15 @@ class Menu extends Component {
               </ul>
             </div>
           </nav>
+          <div className="p-fixed">
+            17:56:37] Failed to load jshint library (node:16036)
+            UnhandledPromiseRejectionWarning: Erro 17:56:37] Failed to load
+            jshint library (node:16036)
+            <div className="hidding">
+              CacheeA UnhandledPromiseRejectionWarning: Erro
+            </div>
+          </div>
+
           <Switch>
             <Route path="/home" component={Home}></Route>
             <Route path="/articles" component={Articles}></Route>

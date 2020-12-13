@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import "./bootstrap.min.css";
 import "./App.css";
-import "./style.css";
+import "./styleBloc.css";
 
 import Menu from "./menu/menu";
 import Linkmenu from "./menu/linkmenu";

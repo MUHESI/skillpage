@@ -1,0 +1,222 @@
+/* @autor : MUHESI Moise, CRES Virtus */
+/* @date : Decemb 2020 */
+/* @bugfix : bug IE6/IE7 de haslayout, résolu avec zoom: 1 */
+/* @bugfix : ici les inline-block transformés en inline + zoom: 1 pour les autres navigateurs */
+/* @todo : ici penser à trouver une alternative aux coins arrondis pour  pour les autres navigateurs*/
+/* @todo : corriger le problème d'espace entre les listes */
+/* @note : on pourrait trouver une technique plus propre pour cette partie */
+
+/* ----------*/
+/* = Summary */
+/* ----------*/
+/* 1- Mentions */
+/* 1.1 Order of declarations */
+.h1 {
+  /* Here is an example(model) */
+  display: inline-block;
+  float: left;
+  margin-top: 0;
+  font-family: 80px/0.8 Tahoma, sans-serif;
+  text-align: right;
+  background-color: black;
+  text-shadow: 0px 0px 5px white;
+}
+/* 1.2 ... */
+/* 2- Base styles */
+/* 3- Blocs and Misc */
+/* 4- Header */
+/* 5- Main */
+/* 6- Sidebar */
+/* 7- Contact */
+/* 8- Footer */
+
+/* Starting */
+body {
+  /*----variable for menu--*/
+
+  --bgPrimary: #121e58;
+  --colYellow: #d9be1b;
+  --colLiknHover: red;
+
+  --sectionTitleImg: "%PUBLIC_URL%/img/sectionTitle.PNG";
+
+  /*background-image:url("");*/
+  /*background-image:opacity(0.5);*/
+  /*------------------------------------------------------*/
+  background-image: url var(--sectionTitleImg);
+  background-image: url("%PUBLIC_URL%/img/sectionTitle.PNG");
+}
+.backg-primary {
+  /* #pour produire un background 'blue'>>par defaut ;*/
+  background: var(--bgPrimary);
+}
+
+.hidding {
+  -moz-column-rule: 1px solid #ccc;
+  overflow: hidden;
+  color: red;
+  text-overflow: ellipsis; /* pour le reste du monde */
+}
+
+.navbar a:hover {
+  transition: 0.5s;
+  color: var(--colLiknHover);
+}
+.navbar a {
+  transition: 0.8s;
+  color: white;
+}
+.dropdown-menu a {
+  color: black;
+}
+.br-buttom {
+  /* #pour produire un boder buttom 'jaune'>>par defaut ;*/
+  border-bottom: 2 / x solid var(--colYellow);
+  /* box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5) inset; */
+}
+.text-bold {
+  color: red;
+  font-weight: bold;
+}
+
+.br-rect {
+  /*  #pour produire un boder rectangulaire 'jaune'>>par defaut ;*/
+  border: 1px solid var(--colYellow);
+}
+/* ******************************  */
+/* = Section Title: infornation    */
+/* ****** @note:************************  */
+/*  */
+
+.info {
+  --valueTop: 5%; /* Initialization */
+  --valueBottun: 5%;
+
+  margin-top: var(--valueTop);
+  margin-bottom: var(--valueBotton);
+}
+/* = Info-A   */
+/* @note: Info-A   Result :text color(title,body...) is in Primary(blue)
+                  and background button in  white, his color in  Primary, all in bold  ...*/
+.info-A {
+  --valueTop: 10%;
+  --valueBotton: 10%;
+
+  margin-top: var(--valueTop);
+  margin-bottom: var(--valueBotton);
+}
+
+.info-A h2 {
+  color: var(--bgPrimary);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.info-A h3 {
+  color: var(--bgPrimary);
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.info-A .body {
+  color: var(--bgPrimary);
+  font-weight: bold;
+}
+.info-A button {
+}
+
+/* = Info-B   */
+/* @note: Info-B   Result :text color(title,body...) is in Primary(blue)
+                  and background button in  white, his color in  Primary, all in bold  ??????*/
+
+/* instructions */
+
+/* ********************  */
+/* = Expertise domaine   */
+/* ********************  */
+/* @note:  */
+
+.bloc {
+  padding: 1% 2% 1% 2%;
+  color: white;
+}
+.bloc-primary {
+  background: var(--bgPrimary);
+}
+
+.bloc-primary ul {
+  padding: 0%;
+  font-size: 0.9em;
+}
+
+.bloc-primary h2 {
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--colYellow);
+}
+.bloc-primary h3 {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: var(--colYellow);
+}
+
+/*  Creation buttons */
+.btn {
+  --bgLight: #dbdbdb;
+  --bgLightHover: #fffefe;
+  --transitionHover: 0.5s;
+  --ColoryelloBut: #c2a526;
+  --ColoryelloButHover: #8b7617;
+
+  padding: 0 8px 0 8px; /*padding:0 5px 0 5px; >>means 0:top 5px:right 0:bottun 5px: left*/
+  margin: 2px;
+  transition: var(--transitionHover);
+  font-weight: bold;
+  font-size: 0.8em;
+}
+.btn-colorPrimary {
+  color: var(--bgPrimary);
+  border: 1px solid var(--colYellow);
+  background-color: var(--bgLight);
+}
+.btn-colorPrimary:hover,
+.btn-colorPrimary:active,
+.btn-colorPrimary:focus {
+  transition: var(--transitionHover);
+  color: var(--bgPrimary);
+  background-color: var(--bgPrimaryHover);
+  /* transform: skew(-25deg, 10deg);
+  transform: rotate(15deg);
+  transform: translate(10px, 10px);
+  transform: scale(2) rotate(45deg) translate(5px, 10px);
+
+
+  */
+}
+.btn-colorYellow {
+  color: var(--bgLightHover);
+  border: 1px solid var(--ColoryelloBut);
+  background-color: var(--colYellow);
+}
+.btn-colorYellow:hover,
+.btn-colorYellow:active,
+.btn-colorYellow:focus {
+  transition: var(--transitionHover);
+  color: var(--bgLightHover);
+
+  background-color: var(--ColoryelloButHover);
+}
+/*=====================================================================
+#header {…} ← bloc d’en-tête, en prévision de HTML 5 <header>
+#footer {…} ← bloc de pied de page, en attendant <footer>
+#nav {…} ← liste de navigation, un jour remplacée par <nav>
+#sidebar {…} ← partie latérale
+#contact {…} ← formulaire de contact
+.clear {…} ← élément en clear: both
+.info {…} ← élément ou bloc d’information
+.warning {…} ← élément ou bloc d’attention
+.error {…} ← signalement d’une erreur (formulaire)
+.success {…} ← signalement d’un succès (formulaire)
+.button {…} ← élément sous forme de bouton
+.more {…} ← lien générique « en savoir plus »
+.block {…} ← mise en forme générique d’un bloc (coins arrondis, ombrages,
+couleur de fond,…)
+==============================================================================*/
