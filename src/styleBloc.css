@@ -45,15 +45,18 @@ body {
   /*------------------------------------------------------*/
   background-image: url var(--sectionTitleImg);
   background-image: url("%PUBLIC_URL%/img/sectionTitle.PNG");
+  background: rgb(240, 238, 238);
 }
 .backg-primary {
   /* #pour produire un background 'blue'>>par defaut ;*/
   background: var(--bgPrimary);
 }
-.backg-light {
+.bloc-light {
   /* #pour produire un background 'blue'>>par defaut ;*/
   background: var(--bgPrimary);
   background: white;
+  border-radius: 5px;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1) inset;
 }
 
 .hidding {
@@ -76,12 +79,26 @@ body {
 }
 .br-buttom {
   /* #pour produire un boder buttom 'jaune'>>par defaut ;*/
-  border-bottom: 2 / x solid var(--colYellow);
+  border-bottom: 1px solid var(--colYellow);
   /* box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5) inset; */
 }
+.br-right {
+  border-right: 1px solid var(--colYellow);
+  padding: 5px;
+}
 .text-bold {
-  color: red;
   font-weight: bold;
+  font-size: 1.8em;
+  color: var(--bgPrimary);
+}
+
+.text-boldYellow {
+  font-weight: bold;
+  color: var(--colYellow);
+}
+.text-boldPrimary {
+  font-weight: bold;
+  color: var(--bgPrimary);
 }
 
 .br-rect {
@@ -208,6 +225,45 @@ body {
   color: var(--bgLightHover);
 
   background-color: var(--ColoryelloButHover);
+}
+
+.btn-linkBlack {
+  color: black;
+  opacity: 0.7;
+}
+.btn-linkBlack:hover,
+.btn-linkBlack:active,
+.btn-linkBlack:focus {
+  transition: var(--transitionHover);
+  color: var(--colYellow);
+  background-color: var(--bgPrimary);
+  opacity: 1;
+
+  /* transform: skew(-25deg, 10deg);
+  transform: rotate(15deg);
+  transform: translate(10px, 10px);
+  transform: scale(2) rotate(45deg) translate(5px, 10px);
+  */
+}
+
+.bloc-grise {
+  /*background: rgb(73, 69, 69);*/
+}
+/* >>>>>>>>>> # dieze */
+.hovertitle {
+  transition: var(--transitionHover);
+}
+.hoverTitle:hover {
+  transition: var(--transitionHover);
+  font-weight: bold;
+}
+
+.img-thumbnail {
+  border: 0px solid white;
+  border-radius: 0px 0px;
+}
+.None-decoration li {
+  list-style: none;
 }
 /*=====================================================================
 #header {…} ← bloc d’en-tête, en prévision de HTML 5 <header>

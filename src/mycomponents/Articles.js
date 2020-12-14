@@ -1,28 +1,22 @@
 import React, { Component } from "react";
 
-class ArticlesImg extends Component {
+class Articles extends Component {
   constructor(props) {
     super(props);
     this.state = {
       // cest dans le constructeur q un defini le state
-      listArticleImg: [
+      listArticles: [
         {
           id: 1,
           title: "Project title1",
-          smallbody: "jshint' or globally using 'npm install",
-          img: "monDefault.jpg",
+          img: "img/profile3.jpg",
+          author: "Jacques Ndavaro",
         },
         {
-          id: 1,
-          title: "Project title2",
-          smallbody: "jshint' or globally using 'npm install",
-          img: "monDefault.jpg",
-        },
-        {
-          id: 1,
-          title: "Project title3",
-          smallbody: "jshint' or globally using 'npm install",
-          img: "monDefault.jpg",
+          id: 2,
+          title: "Project title1",
+          img: "img/profile3.jpg",
+          author: "John Salvador",
         },
       ],
     };
@@ -32,19 +26,25 @@ class ArticlesImg extends Component {
   render() {
     return (
       <div className="">
-        {this.state.listArticleImg.map((article, v) => (
-          <div className="card">
-            <div className="img-card">
-              <img
-                width={100}
-                src={article.img ? article.img : "img/profile3.jpg"}
-              />{" "}
-            </div>
-            <div className="card-header">
-              {article.title ? article.title : "titre default"}
-            </div>
-            <div className="card-body">
-              {article.smallbody ? article.smallbody : "Contenu contenu"}
+        {this.state.listArticles.map((article, v) => (
+          <div className="br-buttom m-2 ">
+            <div className="row g-0">
+              <div className="col-sm-4 col-md-4 col-lg-4">
+                <img
+                  className="img-thumbnail"
+                  src={article.imgg ? article.img : "img/profile3.jpg"}
+                />
+              </div>
+              <div className="col-sm-8 col-md-8">
+                <div className="card-body">
+                  <div className="card-title">
+                    <h5>{article.title ? article.title : "titre default"}</h5>
+                  </div>
+                  <p className="card-text text-boldYellow">
+                    {article.author ? article.author : "MUHESI Moise"}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         ))}
@@ -53,28 +53,31 @@ class ArticlesImg extends Component {
   }
 }
 
-class ArticlesVideo extends Component {
+class ArticlesMoreView extends Component {
   constructor(props) {
     super(props);
     this.state = {
       // cest dans le constructeur q un defini le state
-      listArticleVideo: [
+      listArticlesMoreView: [
         {
           id: 1,
-          title: "Project title1",
+          title: "Article title1 Project title Project title ",
           smallbody: "jshint' or globally using 'npm install",
+          updated: "last updated 3mins ago",
           link: "monDefault.jpg",
         },
         {
-          id: 1,
-          title: "Project title2",
+          id: 2,
+          title: "Article title2 Project title1 Project title Project title",
           smallbody: "jshint' or globally using 'npm install",
+          updated: "last updated 3mins ago",
           link: "monDefault.jpg",
         },
         {
-          id: 1,
-          title: "Project title2",
+          id: 3,
+          title: "Article title3 Project title1 Project title Project title",
           smallbody: "jshint' or globally using 'npm install",
+          updated: "last updated 3mins ago",
           link: "monDefault.jpg",
         },
       ],
@@ -84,26 +87,17 @@ class ArticlesVideo extends Component {
   // { }  []
   render() {
     return (
-      <div className="">
-        {this.state.listArticleVideo.map((article, index) => (
-          <div className="card">
-            <div className="img-card">
-              <img
-                width={100}
-                src={article.img ? article.img : "img/profile3.jpg"}
-              />{" "}
-            </div>
-            <div className="card-header">
+      <div className=" p-2">
+        {this.state.listArticlesMoreView.map((article, index) => (
+          <div>
+            <a href="#" className="">
               {article.title ? article.title : "titre default"}
-            </div>
-            <div className="card-body">
-              {article.smallbody ? article.smallbody : "Contenu contenu"}
-            </div>
+            </a>
           </div>
         ))}
       </div>
     );
   }
 }
-export default ArticlesImg;
-export { ArticlesImg, ArticlesVideo };
+export default Articles;
+export { Articles, ArticlesMoreView };

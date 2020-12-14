@@ -138,14 +138,6 @@ class Menu extends Component {
               </ul>
             </div>
           </nav>
-          <div className="p-fixed">
-            17:56:37] Failed to load jshint library (node:16036)
-            UnhandledPromiseRejectionWarning: Erro 17:56:37] Failed to load
-            jshint library (node:16036)
-            <div className="hidding">
-              CacheeA UnhandledPromiseRejectionWarning: Erro
-            </div>
-          </div>
 
           <Switch>
             <Route path="/home" component={Home}></Route>
