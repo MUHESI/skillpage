@@ -3015,10 +3015,6 @@ input[type="submit"].btn-block {
 .collapse:not(.show) {
   display: none;
 }
-
-.collapse {
-  text-align: right !important;
-}
 .collapsing {
   position: relative;
   height: 0;
@@ -4040,7 +4036,6 @@ input[type="submit"].btn-block {
   display: block;
 }
 .navbar {
-  text-align: right !important;
   position: relative;
   display: -ms-flexbox;
   display: flex;
@@ -4101,7 +4096,6 @@ input[type="submit"].btn-block {
   display: inline-block;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  text-align: right !important;
 }
 .navbar-collapse {
   -ms-flex-preferred-size: 100%;
@@ -4110,7 +4104,6 @@ input[type="submit"].btn-block {
   flex-grow: 1;
   -ms-flex-align: center;
   align-items: center;
-  text-align: right !important;
 }
 .navbar-toggler {
   padding: 0.25rem 0.75rem;

@@ -19,7 +19,7 @@ class Menu extends Component {
     return (
       <div className="">
         <Router>
-          <nav class="navbar navbar-expand-lg br-yellow backg-primary br-buttom ml-auto ">
+          <nav class="navbar navbar-expand-sm br-yellow backg-primary br-buttom ml-auto ">
             <a class="navbar-brand text-bold" href="#">
               CRES
             </a>
