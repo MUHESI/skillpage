@@ -13,7 +13,6 @@ import Events from "./mycomponents/Events";
 import { Articles, ArticlesMoreView } from "./mycomponents/Articles";
 import MapProjects from "./mycomponents/MapProjects";
 import Footer from "./componentsMenu/footer/Footer";
-import Gallery from "./componentsMenu/gallery";
 
 //import { Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
 //import 'bootstrap/dist/css/bootstrap.min.css';

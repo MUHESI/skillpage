@@ -38,6 +38,9 @@ class Menu extends Component {
             <div class="collapse navbar-collapse " id="navbarNavDropdown">
               <ul class="navbar-nav">
                 <li class="nav-item active">
+                  <Link className="nav-link" to="/Gallery">
+                    Gallery
+                  </Link>
                   <Link className="nav-link" to="/home">
                     ACCUEIL <span class="sr-only">(current)</span>
                   </Link>
@@ -143,10 +146,10 @@ class Menu extends Component {
             <Route path="/home" component={Home}></Route>
             <Route path="/articles" component={Articles}></Route>
             <Route path="/cres" component={Cres}></Route>
-
             <Route path="/innovations" component={Innovations}></Route>
             <Route path="/search" component={Search}></Route>
             <Route path="/singup" component={Signup}></Route>
+            <Route path="/Gallery" component={Gallery}></Route>
           </Switch>
         </Router>
       </div>
@@ -154,6 +157,8 @@ class Menu extends Component {
   }
 }
 export default Menu;
+
+//
 
 class NewClasss extends Component {
   render() {
