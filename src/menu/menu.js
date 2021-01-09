@@ -11,6 +11,7 @@ import Signup from "../componentsMenu/signup";
 import Counter from "../mycomponents/counter";
 import Home from "../mycomponents/home";
 import { Gallery, NewClass } from "../mycomponents/gallery";
+// 
 
 // { }
 //  []
@@ -40,9 +41,6 @@ class Menu extends Component {
                 <li class="nav-item active">
                   <Link className="nav-link" to="/Gallery">
                     Gallery
-                  </Link>
-                  <Link className="nav-link" to="/home">
-                    ACCUEIL <span class="sr-only">(current)</span>
                   </Link>
                 </li>
 
