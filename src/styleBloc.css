@@ -11,6 +11,9 @@
 /* ----------*/
 /* 1- Mentions */
 /* 1.1 Order of declarations */
+
+/* {} */
+
 .h1 {
   /* Here is an example(model) */
   display: inline-block;
@@ -37,7 +40,7 @@ body {
   --bgPrimary: #121e58;
   --colYellow: #d9be1b;
   --colLiknHover: red;
-
+  --colWhite: white;
   --sectionTitleImg: "%PUBLIC_URL%/img/sectionTitle.PNG";
 
   /*background-image:url("");*/
@@ -47,6 +50,19 @@ body {
   background-image: url("%PUBLIC_URL%/img/sectionTitle.PNG");
   background: rgb(240, 238, 238);
 }
+
+/*Travailler a faire changer l'emplacemement  {}*/
+.opacity-ON {
+  font-weight: bold;
+  color: var(--bgPrimary);
+  opacity: 1;
+}
+.opacity-OFF {
+  opacity: 0.7;
+  color: var(--bgPrimary);
+}
+
+/*------------------------------------ */
 .backg-primary {
   /* #pour produire un background 'blue'>>par defaut ;*/
   background: var(--bgPrimary);
@@ -54,7 +70,7 @@ body {
 .bloc-light {
   /* #pour produire un background 'blue'>>par defaut ;*/
   background: var(--bgPrimary);
-  background: white;
+  background: var(--colWhite);
   border-radius: 5px;
   box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1) inset;
 }
@@ -72,7 +88,7 @@ body {
 }
 .navbar a {
   transition: 0.8s;
-  color: white;
+  color: var(--colWhite);
 }
 .dropdown-menu a {
   color: black;
@@ -100,16 +116,35 @@ body {
   font-weight: bold;
   color: var(--bgPrimary);
 }
-
+.text-white {
+  color: var(--colWhite);
+  padding: 5px;
+}
 .br-rect {
   /*  #pour produire un boder rectangulaire 'jaune'>>par defaut ;*/
   border: 1px solid var(--colYellow);
+}
+.br-rect-white {
+  /*  #pour produire un boder rectangulaire 'jaune'>>par defaut ;*/
+  border: 1px solid white;
 }
 /* ******************************  */
 /* = Section Title: infornation    */
 /* ****** @note:************************  */
 /*  */
+.br-rect-primary {
+  /*  #pour produire un boder rectangulaire 'jaune'>>par defaut ;*/
+  border: 2px solid var(--bgPrimary);
+  border-radius: 2px;
+  padding: 0px;
+}
 
+.br-circle-10 {
+  border-radius: 10px;
+}
+.br-circle-15 {
+  border-radius: 15px;
+}
 .info {
   --valueTop: 5%; /* Initialization */
   --valueBottun: 5%;
@@ -158,7 +193,7 @@ body {
 
 .bloc {
   padding: 1% 2% 1% 2%;
-  color: white;
+  color: var(--colWhite);
 }
 .bloc-primary {
   background: var(--bgPrimary);
@@ -172,12 +207,12 @@ body {
 .bloc-primary h2 {
   font-size: 1em;
   font-weight: bold;
-  color: var(--colYellow);
+  color: var(--colWhite);
 }
 .bloc-primary h3 {
   font-size: 0.8em;
   font-weight: bold;
-  color: var(--colYellow);
+  color: var(--colWhite);
 }
 
 /*  Creation buttons */
@@ -196,7 +231,7 @@ body {
 }
 .btn-colorPrimary {
   color: var(--bgPrimary);
-  border: 1px solid var(--colYellow);
+  border: 1px solid var(--colWhite);
   background-color: var(--bgLight);
 }
 .btn-colorPrimary:hover,
@@ -209,9 +244,33 @@ body {
   transform: rotate(15deg);
   transform: translate(10px, 10px);
   transform: scale(2) rotate(45deg) translate(5px, 10px);
-
-
   */
+}
+.btn-colorWhite {
+  color: var(--bgPrimary);
+  border: 1px solid var(--colWhite);
+  background-color: var(--bgLight);
+}
+.btn-colorWhite:hover,
+.btn-colorWhite:active,
+.btn-colorWhite:focus {
+  transition: var(--transitionHover);
+  color: var(--colWhite);
+  background-color: var(--bgPrimary);
+}
+/* cette classe se trouve dans une le component 'RecentActivities.js' */
+.btn-title-boldPrimary {
+  color: var(--bgPrimary);
+  /* le bouton cest un titre , par defaut pas de background mais lorsque il ya   */
+  border: 0; /* un 'Hover' le bacground apparait de color Primary */
+  background-color: none;
+}
+.btn-title-boldPrimary:hover,
+.btn-title-boldPrimary:active,
+.btn-title-boldPrimary:focus {
+  transition: var(--transitionHover);
+  color: var(--colWhite);
+  background-color: var(--bgPrimary);
 }
 .btn-colorYellow {
   color: var(--bgLightHover);
@@ -246,8 +305,8 @@ body {
   */
 }
 
-.bloc-grise {
-  /*background: rgb(73, 69, 69);*/
+.bloc-dark {
+  background: #bac4ce;
 }
 /* >>>>>>>>>> # dieze */
 .hovertitle {
