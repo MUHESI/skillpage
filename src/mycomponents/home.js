@@ -1,16 +1,18 @@
 import React, { Component } from "react";
 import { SectionTitle, ExpertiseDomaine } from "../sectionTitle/sectionTitle";
 import { ProjectsImg, ProjectsVideo } from "../mycomponents/Projects";
-import Events from "../mycomponents/Events";
+//import Events from "../mycomponents/Events";
 import { Articles, ArticlesMoreView } from "../mycomponents/Articles";
 import ProjectsPrograms from "../mycomponents/Programs";
 import Aboutus from "../mycomponents/About";
 import RecentActivities from "../mycomponents/RecentActivities";
+import Actualites from "../mycomponents/Actualites";
+
 import MapProjects from "./MapProjects";
 
 //  Manager le repertoire : le fichier est dans le meme dossier on on met ./
 // S'il est dans le dossier parent on met ../
-//  <ExpertiseDomaine />
+//  <ExpertiseDomaine />  <Events />
 export default class Home extends Component {
   render() {
     return (
@@ -42,9 +44,8 @@ export default class Home extends Component {
                     Voir Plus
                   </button>
                 </div>
-
-                <Events />
               </div>
+              <Actualites />
               <div className="bloc-light p-2">
                 <h3 className="text-bold">Articles</h3>
                 <div className="text-right">
