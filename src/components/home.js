@@ -1,5 +1,12 @@
 import React, { Component } from "react";
 import { SectionTitle, ExpertiseDomaine } from "../sectionTitle/sectionTitle";
+import MapProjects from "./MapProjects";
+
+//  Manager le repertoire : le fichier est dans le meme dossier on on met ./
+// S'il est dans le dossier parent on met ../
+//  <ExpertiseDomaine />  <Events />
+/*  const
+<<<<<<< HEAD:src/mycomponents/home.js
 import { ProjectsImg, ProjectsVideo } from "../mycomponents/Projects";
 //import Events from "../mycomponents/Events";
 import { Articles, ArticlesMoreView } from "../mycomponents/Articles";
@@ -7,12 +14,17 @@ import ProjectsPrograms from "../mycomponents/Programs";
 import Aboutus from "../mycomponents/About";
 import RecentActivities from "../mycomponents/RecentActivities";
 import Actualites from "../mycomponents/Actualites";
+=======
+import { ProjectsImg, ProjectsVideo } from "./Projects";
+//import Events from "../mycomponents/Events";
+import { Articles, ArticlesMoreView } from "./Articles";
+import ProjectsPrograms from "./Programs";
+import Aboutus from "./About";
+import RecentActivities from "./RecentActivities";
+import Actualites from "./Actualites";
+>>>>>>> versionColorYELLOW:src/components/home.js
+*/
 
-import MapProjects from "./MapProjects";
-
-//  Manager le repertoire : le fichier est dans le meme dossier on on met ./
-// S'il est dans le dossier parent on met ../
-//  <ExpertiseDomaine />  <Events />
 export default class Home extends Component {
   render() {
     return (
