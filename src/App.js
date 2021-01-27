@@ -6,7 +6,7 @@ import "./styleBloc.css";
 import Navbar from "./components/Navbar";
 import Dropdown from "./components/Dropdown";
 import Home from "./pages";
-//import LeCres from "./pages/LeCres";
+import LeCres from "./pages/LeCres";
 
 //import Home from "./pages";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -31,6 +31,7 @@ function App() {
       <Dropdown IsOpen={IsOpen} toggle={toggle} />
       <Switch>
         <Route path="/" component={Home} exact></Route>
+        <Route path="/LeCres" component={LeCres}></Route>
       </Switch>
     </Router>
   );

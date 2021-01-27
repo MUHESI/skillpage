@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { MenuData } from "../data/MenuData";
 import { Button } from "./Button";
+import logo from "../images/logo/logo.jpg";
 
 // ()   []  { }    `` #
 const Nav = styled.nav`
@@ -76,7 +77,9 @@ const NavBtn = styled.div`
 function Navbar({ toggle }) {
   return (
     <Nav>
-      <Logo to="/"> CRES </Logo>
+      <Logo to="/">
+        <img width={50} className="img-fluid" src={logo} alt="CRES" />
+      </Logo>
       <MenuBars onClick={toggle} />
       <NavMenu>
         {MenuData.map((item, index) => (
