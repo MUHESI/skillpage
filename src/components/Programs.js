@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-//import ProgramsData from "data/ProgramsData";
+import styled, { css } from "styled-components/macro";
 /*import { IoMdArrowForward } from "react-icons/io";
 
 /*import { IoMdArrowForward } from "react-icons/io";
@@ -150,44 +150,99 @@ const PrevArrow = styled(IoArrowBack)`
 const NextArrow = styled(IoArrowForward)`
   ${arrowButtons}
 `;
-// ()   []  { }    `` #
-*/
-const Programs = ({ programs }) => {
-  //gestion de  passation des slides
-  /* const [current, setCurrent] = useState(0);
-  const length = slides.length;
-  const timeout = useRef(null);
 
+/*
+  --bgPrimary: #121e58;
+  --colYellow: #d9be1b;
+  --colLiknHover: red;
+  --colWhite: white;
+  --sectionTitleImg: "%PUBLIC_URL%/img/sectionTitle.PNG";
+  */
+const bgPrimary = "#121e58";
 
-  useEffect(() => {
-    const nextSlide = () => {
-      setCurrent(current === length - 1 ? 0 : current + 1);
-    }; 
-    timeout.current = setTimeout(nextSlide, 3000);
-    return function () {
-      if (timeout.current) {
-        clearTimeout(timeout.current);
-      }
-    };
-  }, [current, length]); // fin 00000000000000000000000000000000000000000
+const SectionGlob = styled.div``;
+const ProgramBtn = styled.div`
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+`;
 
-  const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
-  const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-  };
-  // condition permettant de passation
-  if (!Array.isArray(slides) || slides.length <= 0) {
-    return null;
+const SectionIntroGlob = styled.div`
+  div {
+    margin: 15px;
+    font-size: 18px;
+    width: 75%;
   }
-*/
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+  }
+  p {
+    color: ${bgPrimary};
+    font-size: 15px;
+  }
+`;
 
+const SectionInit = styled.div`
+  margin-top: 40px;
+  padding: 20px;
+`;
+const btnSelectProg = styled.button`
+  display: flex;
+  background-color: ${bgPrimary};
+  color: red;
+`;
+const SectionDebut = styled.div`
+  margin: 5px;
+  h3 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: ${bgPrimary};
+  }
+`;
+
+const SectionTextProg = styled.div`
+  position: absolute;
+  z-index: 5;
+  //left: 50px;  bottom: 300px;  width: 500px;
+  left: 70px;
+  top: -5px;
+  padding: 10px;
+  div {
+    background: ${bgPrimary};
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+    font-weight: none;
+  }
+`;
+const sectionImg = styled.div`
+  z-index: 1;
+  bottom: 0;
+  margin-top: 100px;
+`;
+const ProgramImg = styled.img`
+  border: 1px solid ${bgPrimary};
+  top: 0;
+  left: 0;
+  object-fit: cover;
+`;
+
+// ()   []  { }    `` #
+
+const Programs = ({ programs }) => {
+  const tabPrograms = programs.ListProgramsData;
+  const tabIntro = programs.intro;
   const [value, setFindProject] = useState(1);
   const handleChange = (value) => {
     //alert(value);
     setFindProject(value - 1);
   };
+  const tabIndexBouton = [{ id: 1 }, { id: 2 }, { id: 3 }];
   /* FindProject = (op) => {
     let sign = op === "+" ? 1 : -1; // ici on affecte la valeur a "sign" selon la valeur de "op"
   
@@ -199,43 +254,56 @@ const Programs = ({ programs }) => {
    onClick={() => this.handleChange(3)}
   */
   return (
-    <p>
-      <div>
-        <button onClick={() => handleChange(1)} className="btn btn-dark m-1">
-          1
-        </button>
-        <button onClick={() => handleChange(2)} className="btn btn-dark m-1">
-          2
-        </button>
+    <SectionGlob>
+      <SectionIntroGlob>
+        {tabIntro.map((element, index) => (
+          <div key={index}>
+            <h2>{element.title}</h2>
+            <p>{element.body}</p>
+          </div>
+        ))}
+      </SectionIntroGlob>
+      <ProgramBtn>
+        {tabIndexBouton.map((element, index) => (
+          <btnSelectProg
+            key={index}
+            onClick={() => handleChange(element.id)}
+            className="btn btn-dark m-1"
+          >
+            {element.id}
+          </btnSelectProg>
+        ))}
+      </ProgramBtn>
 
-        <button onClick={() => handleChange(3)} className="btn btn-dark m-1">
-          3
-        </button>
-      </div>
-      {value}
       <div>
-        {programs.map((project, index) => (
-          <p>
+        {tabPrograms.map((project, index) => (
+          <div>
             {index == value ? (
-              <div>
-                <p>{project.title}</p>
-                <p className=" bloc-light backg-primary">
-                  {project.description}
-                </p>
-                <div className=" br-rect-primary">
-                  <div className="img-card">
-                    <img className="img-fluid" src={project.img} />
-                  </div>
+              <div className="row">
+                <div className="col-sm-12 col-md-4 col-lg-4">
+                  <SectionDebut>
+                    <h3>{project.title}</h3>
+                  </SectionDebut>
+                </div>
+                <div className="col-sm-12 col-md-8 col-lg-8">
+                  <SectionInit>
+                    <SectionTextProg>
+                      <div>{project.description}</div>
+                    </SectionTextProg>
+                    <sectionImg className="img-card">
+                      <ProgramImg className="img-fluid" src={project.img} />
+                    </sectionImg>
+                  </SectionInit>
                 </div>
               </div>
             ) : (
               ""
             )}
-          </p>
+          </div>
         ))}
         ;
       </div>
-    </p>
+    </SectionGlob>
   );
 };
 
