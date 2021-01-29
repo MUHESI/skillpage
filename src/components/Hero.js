@@ -3,12 +3,14 @@ import styled, { css } from "styled-components/macro";
 import { IoMdArrowForward } from "react-icons/io";
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 import { Button } from "./Button";
+import Aos from "aos";
+//import "aos/dist/aos.css";
 
 // ()   []  { }    `` #
 
 const HeroSection = styled.section`
   height: 100vh;
-  max-height: 1100px;
+  max-height: 700px;
   position: relative;
   overflow: hidden;
 `;
@@ -30,7 +32,7 @@ const HeroSlider = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -40,8 +42,10 @@ const HeroSlider = styled.div`
     position: absolute;
     z-index: 2;
     width: 100%;
-    height: 100vh;
-    bottom: 0vh;
+    //height: 100vh;
+    height: 100%;
+    //bottom: 0vh;
+    bottom: 0%;
     left: 0;
     overflow: hidden;
     opacity: 0.4;
@@ -57,22 +61,26 @@ const HeroImage = styled.img`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  max-width: 100vw;
   object-fit: cover;
+  opacity: 0.8;
+  transition: 0.3s;
 `;
 //const HeroSlide = styled.div``;
 const HeroContent = styled.div`
   background-image: linear-gradient(#121e58, rgba(0, 0, 0, 1));
   position: relative;
   z-index: 10;
+  top: 0;
   display: flex;
   flex-direction: column;
-  max-width: 1600px;
+  //max-width: 1600px;
+  width: 100%;
+
   width: calc(100% -100px);
   color: #fff;
   padding: 10px;
-  opacity: 0.7;
-  border-radius: 10px;
+  opacity: 0.6;
 
   h1 {
     font-size: clamp(1rem, 4vw, 2rem);
@@ -116,8 +124,8 @@ const SliderButtons = styled.div`
 `;
 
 const arrowButtons = css`
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   color: #121e58;
   cursor: pointer;
   background-image: linear-gradient(red, rgba(0, 2, 0, 0.5));
@@ -185,7 +193,7 @@ const Hero = ({ slides }) => {
           return (
             <HeroSlide key={index}>
               {index === current && (
-                <HeroSlider>
+                <HeroSlider data-aos="fade-left">
                   <HeroImage src={slide.img} alt={slide.alt} />
                   <HeroContent>
                     <h3>{slide.categoryProject}</h3>

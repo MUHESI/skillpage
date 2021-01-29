@@ -1,4 +1,53 @@
 import React from "react";
+import BecomeMember from "./BecomeMember";
+import styled, { css } from "styled-components/macro";
+const SectionGlob = styled.div`
+  padding: 5%;
+`;
+const Actualities = ({ ActualitiesData }) => {
+  return (
+    <SectionGlob>
+      <div className="row">
+        {ActualitiesData.map((actuality, v) => (
+          <div className="col-sm-12 col-md-3 col-lg-3">
+            <div class="card">
+              <img
+                class="card-img-top img-fluid"
+                src={actuality.img ? actuality.img : "imgActuallyDefault"}
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 className="card-title text-boldPrimary">
+                  {actuality.title ? actuality.title : "titre default"}
+                </h5>
+
+                <p class="card-text">
+                  {" "}
+                  {actuality.smallbody ? actuality.smallbody : "CRES"}
+                </p>
+              </div>
+
+              <div className="">
+                <button className="btn btn-linkBlack">Read more...</button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <section>
+        <BecomeMember />
+      </section>
+    </SectionGlob>
+  );
+};
+
+export default Actualities;
+
+/** 
+
+ 
+
+import React from "react";
 
 const RecentActivities = ({ RecentActivitiesData }) => {
   const RecentActivity = RecentActivitiesData.RecentActivity;
@@ -61,3 +110,4 @@ const RecentActivities = ({ RecentActivitiesData }) => {
   );
 };
 export default RecentActivities;
+*/

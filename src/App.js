@@ -11,6 +11,7 @@ import LeCres from "./pages/LeCres";
 //import Home from "./pages";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //import Card from "./component/Card";
+//import { useSpring, animated } from "react-spring";
 
 // ()   []  { }    ``
 /*  const text = styled.p( ["color: red;"] )

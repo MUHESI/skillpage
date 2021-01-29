@@ -4,6 +4,7 @@ import styled, { css } from "styled-components/macro";
 import { MenuData } from "../data/MenuData";
 import { FaTimes } from "react-icons/fa";
 import { Button } from "./Button";
+import Aos from "aos";
 
 const Icon = styled.div`
   position: absolute;
@@ -72,7 +73,7 @@ const DropdownContainer = styled.div`
 // opacity: ${({ IsOpen }) => (IsOpen ? "1" : "0")};
 const Dropdown = ({ IsOpen, toggle }) => {
   return (
-    <DropdownContainer IsOpen={IsOpen} onClick={toggle}>
+    <DropdownContainer IsOpen={IsOpen} onClick={toggle} data-aos="flip-left">
       <Icon OnClick={toggle}>
         <CloseIcon />
       </Icon>
@@ -85,7 +86,13 @@ const Dropdown = ({ IsOpen, toggle }) => {
           ))}
         </DropdownMenu>
         <BtnWrap>
-          <Button primary="true" round="true" big="true" to="/contact">
+          <Button
+            data-aos="fade-up"
+            primary="true"
+            round="true"
+            big="true"
+            to="/contact"
+          >
             REJOINDRE
           </Button>
         </BtnWrap>
