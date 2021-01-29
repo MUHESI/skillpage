@@ -9,6 +9,7 @@ import Hero from "../components/Hero";
 import Programs from "../components/Programs";
 import About from "../components/About";
 import Actualities from "../components/Actualities";
+import Footer from "../components/Actualities";
 
 // Data
 import { SliderData } from "../data/SliderData";
@@ -16,6 +17,7 @@ import { ProgramsData } from "../data/ProgramsData";
 import { WeAre, Vision, Mission, ImgAbout } from "../data/AboutData";
 import { RecentActivitiesData } from "../data/RecentActivitiesData";
 import { ActualitiesData } from "../data/ActualitiesData";
+import { FooterData } from "../data/FooterData";
 
 //import { useSpring, animated } from "react-spring";
 
@@ -33,12 +35,15 @@ const Home = () => {
         ImgAbout={ImgAbout}
       />
       <div className=""></div>
-      <RecentActivities RecentActivitiesData={RecentActivitiesData} />
       <Actualities ActualitiesData={ActualitiesData} />
+      <RecentActivities RecentActivitiesData={RecentActivitiesData} />
+
+      <Footer FooterData={FooterData} />
     </>
   );
 };
 
+//
 //   { const Home = useSpring({opacity: 1, from: {opacity: 0}}) return <animated.div style={props}>I will fade in</animated.div> }
 
 export default Home;

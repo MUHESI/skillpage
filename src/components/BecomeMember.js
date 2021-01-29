@@ -6,25 +6,21 @@ import { Button } from "./Button";
 const colorPrimary = "#121e58;";
 
 const SectionGbl = styled.div`
-
   text-align: center;
-  padding: 20px;
-  margin: 5%;
-  background: ${colorPrimary};
+  padding: 30px;
+  margin: 10px;
+  background-image: linear-gradient(#121e58, rgba(0.5, 0, 0, 1.3));
+
   border-radius: 10px;
-  color:white;
-  opacity:0.7;
+  color: white;
+  opacity: 0.7;
 
- 
-
+  h1 {
+    font-size: 1.6rem;
   }
   div {
     font-size: 1rem;
-     
-  }
-  }
-  h1 {
-    font-size: 1.6rem;
+    margin: 2px;
   }
 `;
 
@@ -61,7 +57,7 @@ const NextArrow = styled(IoArrowForward)`
   ${arrowButtons}
 `;
 const btnWrap = styled.div`
-  color: green;
+  text-align: center;
 `;
 const BecomeMember = () => {
   //  const RecentActivity = RecentActivitiesData.RecentActivity;

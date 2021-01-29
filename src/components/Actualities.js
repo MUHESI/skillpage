@@ -7,8 +7,21 @@ const SectionGlob = styled.div`
 const Actualities = ({ ActualitiesData }) => {
   return (
     <SectionGlob>
-      <div className="row">
-        {ActualitiesData.map((actuality, v) => (
+      <div className="row"></div>
+      <section>
+        <BecomeMember />
+      </section>
+    </SectionGlob>
+  );
+};
+
+export default Actualities;
+
+/** 
+
+--------------------------
+
+  {ActualitiesData.map((actuality, v) => (
           <div className="col-sm-12 col-md-3 col-lg-3">
             <div class="card">
               <img
@@ -33,17 +46,7 @@ const Actualities = ({ ActualitiesData }) => {
             </div>
           </div>
         ))}
-      </div>
-      <section>
-        <BecomeMember />
-      </section>
-    </SectionGlob>
-  );
-};
-
-export default Actualities;
-
-/** 
+-------------------------
 
  
 
