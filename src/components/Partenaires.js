@@ -1,6 +1,6 @@
 import React from "react";
 
-const RecentActivities = () => {
+const Partenaires = () => {
   //const RecentActivity = RecentActivitiesData.RecentActivity;
 
   return (
@@ -16,4 +16,4 @@ const RecentActivities = () => {
     </div>
   );
 };
-export default RecentActivities;
+export default Partenaires;

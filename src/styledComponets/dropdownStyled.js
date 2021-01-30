@@ -1,20 +1,6 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
-import { MenuData } from "../data/MenuData";
-import Aos from "aos"; // A supprimer !!
-import { Button } from "./Button";
 import styled, { css } from "styled-components/macro";
-/**
-import {
-  Icon,
-  CloseIcon,
-  DropdownWrapper,
-  DropdownMenu,
-  DropdownLink,
-  BtnWrap,
-  DropdownContainer,
-} from "../styledComponets/dropdownStyled"; */
 
 const Icon = styled.div`
   position: absolute;
@@ -79,36 +65,12 @@ const DropdownContainer = styled.div`
   opacity: 1;
   top: ${({ IsOpen }) => (IsOpen ? "0" : "-100%")};
 `;
-
-// opacity: ${({ IsOpen }) => (IsOpen ? "1" : "0")};
-const Dropdown = ({ IsOpen, toggle }) => {
-  return (
-    <DropdownContainer IsOpen={IsOpen} onClick={toggle} data-aos="flip-left">
-      <Icon OnClick={toggle}>
-        <CloseIcon />
-      </Icon>
-      <DropdownWrapper>
-        <DropdownMenu>
-          {MenuData.map((item, index) => (
-            <DropdownLink to={item.link} key={index}>
-              {item.title}{" "}
-            </DropdownLink>
-          ))}
-        </DropdownMenu>
-        <BtnWrap>
-          <Button
-            data-aos="fade-up"
-            primary="true"
-            round="true"
-            big="true"
-            to="/contact"
-          >
-            REJOINDRE
-          </Button>
-        </BtnWrap>
-      </DropdownWrapper>
-    </DropdownContainer>
-  );
+export default {
+  Icon,
+  CloseIcon,
+  DropdownWrapper,
+  DropdownMenu,
+  DropdownLink,
+  BtnWrap,
+  DropdownContainer,
 };
-
-export default Dropdown;
