@@ -7,10 +7,8 @@ const colorPrimary = "#121e58;";
 
 const SectionGbl = styled.div`
   text-align: center;
-  padding: 30px;
-  margin: 10px;
+  padding: 5px;
   background-image: linear-gradient(#121e58, rgba(0.5, 0, 0, 1.3));
-
   border-radius: 10px;
   color: white;
   opacity: 0.7;

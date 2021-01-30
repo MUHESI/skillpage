@@ -9,6 +9,8 @@ import Hero from "../components/Hero";
 import Programs from "../components/Programs";
 import About from "../components/About";
 import Actualities from "../components/Actualities";
+import Partenaires from "../components/Partenaires";
+import Carou from "../components/Carousel";
 import Footer from "../components/Actualities";
 
 // Data
@@ -17,6 +19,7 @@ import { ProgramsData } from "../data/ProgramsData";
 import { WeAre, Vision, Mission, ImgAbout } from "../data/AboutData";
 import { RecentActivitiesData } from "../data/RecentActivitiesData";
 import { ActualitiesData } from "../data/ActualitiesData";
+import { partenaireData } from "../data/partenaireData";
 import { FooterData } from "../data/FooterData";
 
 //import { useSpring, animated } from "react-spring";
@@ -34,10 +37,17 @@ const Home = () => {
         Mission={Mission}
         ImgAbout={ImgAbout}
       />
-      <div className=""></div>
+      <div className="row p-4">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <Partenaires />
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 p-3">
+          <Carou partenaireData={partenaireData} />
+        </div>
+      </div>
+      ;
       <Actualities ActualitiesData={ActualitiesData} />
       <RecentActivities RecentActivitiesData={RecentActivitiesData} />
-
       <Footer FooterData={FooterData} />
     </>
   );
