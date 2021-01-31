@@ -1,20 +1,6 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
-/** 
-import Aos from "aos";
 
-useEffect(() => {
-  Aos.init({ durations: 2000 });
-}, []);
-  data-aos='fade-up'
-   data-aos='fade-down'
-   data-aos='fade-right'
-     data-aos='fade-left'
-       data-aos='flip-right'
-        data-aos='flip-left'
-
-  */
-// ()   []  {useEffect }
 const Aboutus = ({ WeAre, Vision, Mission, ImgAbout }) => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -42,7 +28,7 @@ const Aboutus = ({ WeAre, Vision, Mission, ImgAbout }) => {
                 <span className="">Qui sommes-nous</span>
               </h2>
             </div>
-            <div className="body m-2">{WeAre}</div>
+            <div className="body m-2">{}</div>
           </div>
           <div className="p-2">
             <div className="tilte">

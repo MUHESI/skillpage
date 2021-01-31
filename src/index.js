@@ -4,7 +4,8 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router } from "react-router-dom";
-
+import Aos from "aos";
+Aos.init({ durations: 2000 });
 ReactDOM.render(
   <React.StrictMode>
     <Router>

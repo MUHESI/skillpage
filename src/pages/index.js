@@ -16,7 +16,8 @@ import Footer from "../components/Actualities";
 // Data
 import { SliderData } from "../data/SliderData";
 import { ProgramsData } from "../data/ProgramsData";
-import { WeAre, Vision, Mission, ImgAbout } from "../data/AboutData";
+import { ImgAbout } from "../data/AboutData";
+import data from '../helper/data.json';
 import { RecentActivitiesData } from "../data/RecentActivitiesData";
 import { ActualitiesData } from "../data/ActualitiesData";
 import { partenaireData } from "../data/partenaireData";
@@ -32,9 +33,9 @@ const Home = () => {
       <Hero slides={SliderData} />
       <Programs programs={ProgramsData} />
       <About
-        WeAre={WeAre}
-        Vision={Vision}
-        Mission={Mission}
+        WeAre={data.aboutData[0].text}
+        Vision={data.aboutData[1].text}
+        Mission={data.aboutData[2].text}
         ImgAbout={ImgAbout}
       />
       <div className="row p-4">

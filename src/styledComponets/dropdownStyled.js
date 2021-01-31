@@ -49,13 +49,12 @@ const BtnWrap = styled.div`
   display: flex;
 `;
 
-// ()   []  { }    `` #
 const DropdownContainer = styled.div`
   position: fixed;
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: #121e58; // couleur Bleu.
+  background: #121e58;
   color: white;
   display: grid;
   align-items: center;

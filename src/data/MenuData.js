@@ -1,5 +1,3 @@
-// ()   []  { }    ``
-
 export const MenuData = [
   { title: "Home", link: "/" },
   { title: "Le Cres +", link: "LeCres" },

@@ -1,0 +1,14 @@
+{
+    "aboutData": [
+        {"key": 1, "name": "weAre", "text" : "Nous sommes  connexion permettra aux membres (Vendeurs simples ,commissionnaires de s’identifiant en complétant les 2 champs montrés dans la figure suivante." },
+        {"key": 2, "name": "vision", "text" : "Vision connexion permettra aux membres (Vendeurs simples ,commissionnaires de s’identifiant en complétant les 2 champs montrés dans la figure suivante." },
+        {"key": 3, "name": "mission", "text": "Mission connexion permettra aux membres (Vendeurs simples ,commissionnaires de s’identifiant en complétant les 2 champs montrés dans la figure suivante."}
+    ],
+    "newsData": [
+        {}
+    ],
+    "footerData": {
+        
+    }
+
+}
