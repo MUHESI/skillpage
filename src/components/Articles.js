@@ -22,7 +22,6 @@ class Articles extends Component {
     };
   }
 
-  // { }  []
   render() {
     return (
       <div className="">

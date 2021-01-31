@@ -7,20 +7,7 @@ import Navbar from "./components/Navbar";
 import Dropdown from "./components/Dropdown";
 import Home from "./pages";
 import LeCres from "./pages/LeCres";
-
-//import Home from "./pages";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-//import Card from "./component/Card";
-//import { useSpring, animated } from "react-spring";
-
-// ()   []  { }    ``
-/*  const text = styled.p( ["color: red;"] )
-const text = styled.p`
-  color: red;
-`; 
- 
-*/
-
 function App() {
   const [IsOpen, setIsOpen] = useState(false);
   const toggle = () => {
@@ -33,6 +20,7 @@ function App() {
       <Switch>
         <Route path="/" component={Home} exact></Route>
         <Route path="/LeCres" component={LeCres}></Route>
+        <Route path="/innovations" component={LeCres}></Route>
       </Switch>
     </Router>
   );
