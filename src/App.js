@@ -1,18 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./bootstrap.min.css";
 import "./App.css";
 import "./styleBloc.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 // Arrangement des pages
 import Navbar from "./components/Navbar";
 import Dropdown from "./components/Dropdown";
 import Home from "./pages";
 import LeCres from "./pages/LeCres";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-function App() {
+
+const App = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   const [IsOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen(!IsOpen);
   };
+
   return (
     <Router>
       <Navbar toggle={toggle} />
@@ -24,6 +31,6 @@ function App() {
       </Switch>
     </Router>
   );
-}
+};
 
 export default App;

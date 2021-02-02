@@ -3,8 +3,6 @@ import styled, { css } from "styled-components/macro";
 import { IoMdArrowForward } from "react-icons/io";
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 import { Button } from "./Button";
-import Aos from "aos";
-//import "aos/dist/aos.css";
 
 // ()   []  { }    `` #
 
@@ -193,7 +191,7 @@ const Hero = ({ slides }) => {
           return (
             <HeroSlide key={index}>
               {index === current && (
-                <HeroSlider data-aos="fade-left">
+                <HeroSlider>
                   <HeroImage src={slide.img} alt={slide.alt} />
                   <HeroContent>
                     <h3>{slide.categoryProject}</h3>

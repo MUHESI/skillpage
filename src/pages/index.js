@@ -17,7 +17,7 @@ import Footer from "../components/Actualities";
 import { SliderData } from "../data/SliderData";
 import { ProgramsData } from "../data/ProgramsData";
 import { ImgAbout } from "../data/AboutData";
-import data from '../helper/data.json';
+import data from "../helper/data.json";
 import { RecentActivitiesData } from "../data/RecentActivitiesData";
 import { ActualitiesData } from "../data/ActualitiesData";
 import { partenaireData } from "../data/partenaireData";
@@ -40,7 +40,7 @@ const Home = () => {
       />
       <div className="row p-4">
         <div class="col-sm-12 col-md-6 col-lg-6">
-          <Partenaires />
+          <Partenaires data-aos="fade-up" />
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6 p-3">
           <Carou partenaireData={partenaireData} />

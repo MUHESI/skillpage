@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 import { MenuData } from "../data/MenuData";
-import Aos from "aos"; // A supprimer !!
 import { Button } from "./Button";
 import styled, { css } from "styled-components/macro";
 /**
@@ -79,11 +78,11 @@ const DropdownContainer = styled.div`
   opacity: 1;
   top: ${({ IsOpen }) => (IsOpen ? "0" : "-100%")};
 `;
-
+//
 // opacity: ${({ IsOpen }) => (IsOpen ? "1" : "0")};
 const Dropdown = ({ IsOpen, toggle }) => {
   return (
-    <DropdownContainer IsOpen={IsOpen} onClick={toggle} data-aos="flip-left">
+    <DropdownContainer IsOpen={IsOpen} onClick={toggle}>
       <Icon OnClick={toggle}>
         <CloseIcon />
       </Icon>
@@ -96,13 +95,7 @@ const Dropdown = ({ IsOpen, toggle }) => {
           ))}
         </DropdownMenu>
         <BtnWrap>
-          <Button
-            data-aos="fade-up"
-            primary="true"
-            round="true"
-            big="true"
-            to="/contact"
-          >
+          <Button primary="true" round="true" big="true" to="/contact">
             REJOINDRE
           </Button>
         </BtnWrap>

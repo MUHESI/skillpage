@@ -10,7 +10,7 @@ const RecentActivities = ({ RecentActivitiesData }) => {
         <h2>Activités recentes</h2>
       </div>
       <div className="row m-2">
-        <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="col-sm-12 col-md-6 col-lg-6" data-aos="fade-right">
           {RecentActivity.map((activity, v) => (
             <div className="">
               <div className="img-card">

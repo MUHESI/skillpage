@@ -11,6 +11,7 @@
     "axios": "^0.21.1",
     "bootstrapp": "0.0.0",
     "icons": "^1.0.0",
+    "oos": "0.0.1",
     "react": "^16.14.0",
     "react-dom": "^16.13.1",
     "react-elastic-carousel": "^0.11.1",

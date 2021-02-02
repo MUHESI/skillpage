@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import styled, { css } from "styled-components/macro";
-import Aos from "aos";
 
 /*import { IoMdArrowForward } from "react-icons/io";
 
@@ -8,7 +7,7 @@ import Aos from "aos";
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 import { Button } from "./Button";
 */
-// Aos cest pour les annimations
+
 // ()   []  { }    `` #
 /*
 const HeroSection = styled.section`
@@ -247,9 +246,7 @@ const Programs = ({ programs }) => {
     setFindProject(value - 1);
   };
   const tabIndexBouton = [{ id: 1 }, { id: 2 }, { id: 3 }];
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
+
   /* FindProject = (op) => {
     let sign = op === "+" ? 1 : -1; // ici on affecte la valeur a "sign" selon la valeur de "op"
   
@@ -263,8 +260,8 @@ const Programs = ({ programs }) => {
   // () [] {} `` #
 
   return (
-    <SectionGlob data-aos="fade-left">
-      <SectionIntroGlob>
+    <SectionGlob>
+      <SectionIntroGlob data-aos="fade-right">
         {tabIntro.map((element, index) => (
           <div key={index}>
             <h2>{element.title}</h2>

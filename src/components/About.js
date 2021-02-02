@@ -1,12 +1,8 @@
 import React, { useEffect } from "react";
-import Aos from "aos";
 
 const Aboutus = ({ WeAre, Vision, Mission, ImgAbout }) => {
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
   return (
-    <div className="bloc bloc-primary" data-aos="fade-right">
+    <div className="bloc bloc-primary">
       <div className="row m-1">
         <div class="col-sm-8 col-md-4 col-lg-4">
           <div className="">
@@ -21,7 +17,7 @@ const Aboutus = ({ WeAre, Vision, Mission, ImgAbout }) => {
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-8 col-lg-8" data-aos="fade-up">
+        <div class="col-sm-12 col-md-8 col-lg-8" data-aos="fade-left">
           <div className="p-2">
             <div className="tilte">
               <h2>
