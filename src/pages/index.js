@@ -11,7 +11,7 @@ import About from "../components/About";
 import Actualities from "../components/Actualities";
 import Partenaires from "../components/Partenaires";
 import Carou from "../components/Carousel";
-import Footer from "../components/Actualities";
+import Footer from "../components/Footer";
 
 // Data
 import { SliderData } from "../data/SliderData";
