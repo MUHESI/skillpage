@@ -2,8 +2,15 @@ import React from "react";
 import { Router } from "react-router";
 import { MenuData } from "../data/MenuData";
 import { Button } from "./Button";
-import logo from "../images/logo/logo.jpg";
-import { Logo, MenuBars, Nav, NavBtn, NavMenu, NavMenuLinks } from '../styledComponets/NavbarStyled';
+import logo from "../images/logo/logoCRES.png";
+import {
+  Logo,
+  MenuBars,
+  Nav,
+  NavBtn,
+  NavMenu,
+  NavMenuLinks,
+} from "../styledComponets/NavbarStyled";
 
 const Navbar = ({ toggle }) => {
   return (
@@ -26,6 +33,6 @@ const Navbar = ({ toggle }) => {
       </NavBtn>
     </Nav>
   );
-}
+};
 
 export default Navbar;
