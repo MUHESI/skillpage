@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { ProgramsData } from "../data/ProgramsData";
 import { Box } from "../styledComponets/CresStyled";
 
-const LeCres = () => {
+const Opportiunities = () => {
   return (
     <>
       <Box>
-        <h2 style={{ color: "white" }}> My TEXT </h2>
+        <h2 style={{ color: "white" }}> Opportiunities PAGE </h2>
       </Box>
     </>
   );
 };
 
-export default LeCres;
+export default Opportiunities;

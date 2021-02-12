@@ -9,7 +9,7 @@ export const ProgramsData = {
     {
       title: "Nos programmes",
       body:
-        "Body processT(internal/process/task_queues.js:94:5) (node:7932) UnhandledPromiseRejectionWarning: Unhandled",
+        "CRES launched its activities in 2018 with a strategic plan that takes into account the inputs from students and professionals from many sectors. Thus, CRES is made up of scientists, engineers, researchers,CRES launched its activities in 2018 with a strategic plan that takes into account the inputs from students and professionals from many sectors. Thus, CRES is made up of scientists, engineers, researchers,",
     },
   ],
   ListProgramsData: [

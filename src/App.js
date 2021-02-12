@@ -4,6 +4,7 @@ import "./App.css";
 import "./styleBloc.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import styled from "styled-components";
 // Arrangement des pages
 import Navbar from "./components/Navbar";
 import Dropdown from "./components/Dropdown";
@@ -19,6 +20,7 @@ const App = () => {
   const toggle = () => {
     setIsOpen(!IsOpen);
   };
+  //
 
   return (
     <Router>
