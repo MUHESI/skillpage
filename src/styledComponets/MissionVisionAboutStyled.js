@@ -7,10 +7,10 @@ import {
   sizeDiv,
 } from "../helper/constCss";
 
-export const Box = styled.section`
-  height: 500px;
+export const SectionDiv = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: red;
   background-color: ${colorPrimary};
 `;

@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import { ProgramsData } from "../data/ProgramsData";
-import { Box } from "../styledComponets/CresStyled";
+import HeroLeCres from "../components/HeroLeCres";
+import History from "../components/LeCres/History";
+import Partenaires from "../components/LeCres/Partenaires";
+
+// Data
+import { SliderLeCresData } from "../data/SliderLeCresData";
+// CSS
+import MissionVisionAbout from "../components/MissionVisionAbout";
 
 const LeCres = () => {
   return (
     <>
-      <Box>
-        <h2 style={{ color: "white" }}> My TEXT </h2>
-      </Box>
+      <HeroLeCres slides={SliderLeCresData} />
+      <MissionVisionAbout />
+      <History />
+      <Partenaires />
     </>
   );
 };

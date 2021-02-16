@@ -8,8 +8,10 @@ import styled from "styled-components";
 // Arrangement des pages
 import Navbar from "./components/Navbar";
 import Dropdown from "./components/Dropdown";
+// Pages
 import Home from "./pages";
 import LeCres from "./pages/LeCres";
+import Innovations from "./pages/Innovations";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
@@ -29,7 +31,7 @@ const App = () => {
       <Switch>
         <Route path="/" component={Home} exact></Route>
         <Route path="/LeCres" component={LeCres}></Route>
-        <Route path="/innovations" component={LeCres}></Route>
+        <Route path="/innovations" component={Innovations}></Route>
       </Switch>
     </Router>
   );
