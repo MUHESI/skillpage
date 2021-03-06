@@ -38,7 +38,7 @@ body {
   /*----variable for menu--*/
 
   --bgPrimary: #121e58;
-  --colYellow: #d9be1b;
+  --colYellow: #ffd103;
   --colLiknHover: red;
   --colWhite: white;
   --sectionTitleImg: "%PUBLIC_URL%/img/sectionTitle.PNG";
@@ -118,7 +118,7 @@ body {
 }
 .text-white {
   color: var(--colWhite);
-  padding: 5px;
+  /* padding: 5px; */
 }
 .br-rect {
   /*  #pour produire un boder rectangulaire 'jaune'>>par defaut ;*/
@@ -340,3 +340,97 @@ body {
 .block {…} ← mise en forme générique d’un bloc (coins arrondis, ombrages,
 couleur de fond,…)
 ==============================================================================*/
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.paraf-historique {
+  color: rgba(138, 158, 175, 1);
+}
+
+/* .years {
+  color :rgba(138, 158, 175, 1)
+} */
+
+.valeurs span {
+  margin-right: 40px;
+}
+
+.historique {
+  margin-top: 80px;
+  color: #fff;
+  background-color: #154c79;
+  padding: 200px 0;
+}
+
+.historique .container {
+  margin-left: 20px;
+  border-left: 2px solid #fff;
+}
+
+.historique h2:hover {
+  color: #7ebaef;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.histo {
+  margin-left: 100px;
+}
+
+.section2 {
+  background-color: rgb(41, 40, 40);
+  padding: 50px;
+  color: #fff;
+  align-items: center;
+}
+
+.section2 .line1 .div1 {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.section2 .mil,
+.section2 .cap {
+  color: #ffd103;
+}
+
+.section2 .usd {
+  font-size: 10px;
+}
+
+.section2 .mil {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.section2 .cap {
+  font-size: 10px;
+  color: grey;
+}
+
+#carouselExampleIndicators {
+  width: 50%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-item img {
+  width: 30%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}

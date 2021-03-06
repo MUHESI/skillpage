@@ -1,0 +1,9 @@
+Logiciel de gestion de versions est un logiciel qui permet de stocker
+ un ensemble de fichiers en conservant la chronologie de toutes les modifications
+  qui ont été effectuées dessus. Il permet notamment de retrouver les différentes 
+  versions d'un lot de fichiers connexes. GitHub est centré vers l'aspect social
+   du développement. En plus d'offrir l'hébergement de projets avec Git, le site
+    offre de nombreuses fonctionnalités habituellement retrouvées sur les réseaux
+     sociaux comme les flux, la possibilité de suivre des personnes ou des projets
+      ainsi que des graphes de réseaux pour les dépôts (en anglais
+ repository). GitHub offre aussi la possibilité de créer un wiki et
