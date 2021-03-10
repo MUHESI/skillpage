@@ -3,6 +3,14 @@ import { IoMdArrowForward } from "react-icons/io";
 import Carousel from "react-elastic-carousel";
 import styled, { css } from "styled-components/macro";
 
+import {
+  colorPrimary,
+  fontSizeRef,
+  SizetitleOne,
+  SizetitleTwo,
+  sizeDiv,
+} from "../../data/constCssData";
+
 // style={{ "background-color": "#1B4164" }}
 
 const Item = styled.div`
@@ -15,8 +23,9 @@ const Item = styled.div`
     background: transparent;
     object-fit: cover;
   }
+  /* #121e58, */
   div {
-    background-image: linear-gradient(#121e58, rgba(0, 0, 0, 1));
+    background-image: linear-gradient(${colorPrimary}, rgba(0, 0, 0, 1));
     padding: 1px;
     margin-top: 0;
     text-align: center;
@@ -44,8 +53,11 @@ const Item = styled.div`
 `;
 
 const SectionCarou = styled.div`
-  background: #dbdbdb;
+  /* background: #dbdbdb; */
+  background: white;
+
   font-size: 1em;
+  padding: 15px;
   h1 {
     font-size: 1.2em;
     color: #121e58;

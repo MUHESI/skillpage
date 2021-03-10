@@ -52,8 +52,11 @@ const DropdownLink = styled(Link)`
   list-style: none;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-
+  opacity: 1;
   &:hover {
+    text-decoration: none;
+    transition: 0.1s ease-in-out;
+    opacity: 0.7;
     color: white;
   }
 `;
@@ -65,7 +68,7 @@ const BtnWrap = styled.div`
 // ()   []  { }    `` #
 const DropdownContainer = styled.div`
   position: fixed;
-  z-index: 999;
+  z-index: 100;
   width: 100%;
   height: 100%;
   background: #121e58; // couleur Bleu.
@@ -76,6 +79,8 @@ const DropdownContainer = styled.div`
   left: 0;
   transition: 0.5s case-ease-in-out;
   opacity: 1;
+
+  border-bottom: 1px solid #ffd103;
   top: ${({ IsOpen }) => (IsOpen ? "0" : "-100%")};
 `;
 //

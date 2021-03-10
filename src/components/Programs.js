@@ -27,18 +27,19 @@ const ProgramBtn = styled.div`
 `;
 const SectionIntroGlob = styled.div`
   div {
-    margin: 15px;
+    margin-left: 25px;
     font-size: 18px;
-    width: 75%;
+    text-align: justify;
+    width: 70%;
   }
   h2 {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     color: black;
   }
   p {
     color: ${colorPrimary};
-    font-size: ${colorPrimary};
+    font-size: 0.9em;
   }
 `;
 
@@ -54,9 +55,15 @@ const btnSelectProg = styled.button`
 const SectionDebut = styled.div`
   margin: 5px;
   h3 {
-    font-size: 25px;
+    font-size: 1.5em;
     font-weight: bold;
     text-align: center;
+    color: ${sizeDiv};
+    transition: 1.5s;
+  }
+  h3:hover {
+    transition: 1.5s;
+    font-size: 1.8em;
     color: ${sizeDiv};
   }
 `;
@@ -102,7 +109,7 @@ const Programs = ({ programs }) => {
         {tabIntro.map((element, index) => (
           <div key={index}>
             <h2>{element.title}</h2>
-            <p>{element.body}</p>
+            <p className="p-3">{element.body}</p>
           </div>
         ))}
       </SectionIntroGlob>
@@ -131,7 +138,7 @@ const Programs = ({ programs }) => {
                 <div className="col-sm-12 col-md-6 col-lg-6">
                   <SectionInit>
                     <SectionTextProg>
-                      <div>{project.description}</div>
+                      <div data-aos="flip-left">{project.description}</div>
                     </SectionTextProg>
                     <sectionImg className="img-card">
                       <ProgramImg className="img-fluid" src={project.img} />

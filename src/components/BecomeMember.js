@@ -8,11 +8,10 @@ const colorPrimary = "#121e58;";
 const SectionGbl = styled.div`
   text-align: center;
   padding: 5px;
-  background-image: linear-gradient(#121e58, rgba(0.5, 0, 0, 1.3));
+  background-color: #121e58;
+
   border-radius: 10px;
   color: white;
-  opacity: 0.7;
-
   h1 {
     font-size: 1.6rem;
   }
@@ -27,7 +26,6 @@ const arrowButtons = css`
   height: 25px;
   color: #121e58;
   cursor: pointer;
-
   border: 1px solid #121e58;
   border-radius: 15px;
   padding: 3px;
@@ -74,10 +72,11 @@ const BecomeMember = () => {
             primary="true"
             css={`
               max-width: 5px;
+              margin: 10px;
             `}
             primary="true"
             round="true"
-            big="true"
+            big="false"
           >
             Lire plus
           </Button>

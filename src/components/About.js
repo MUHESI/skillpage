@@ -1,5 +1,11 @@
 import React, { useEffect } from "react";
+import styled, { css } from "styled-components/macro";
 
+const DivMission = styled.div`
+  text-align: justify;
+  padding-left: 5px;
+  font-weight: none;
+`;
 const Aboutus = ({ WeAre, Vision, Mission, ImgAbout }) => {
   return (
     <div className="bloc bloc-primary">
@@ -21,27 +27,29 @@ const Aboutus = ({ WeAre, Vision, Mission, ImgAbout }) => {
           <div className="p-2">
             <div className="tilte">
               <h2>
-                <span className="">Qui sommes-nous</span>
+                <span className="">Qui sommes-nous ?</span>
               </h2>
             </div>
-            <div className="body m-2">{}</div>
+            {/* <DivMission className="">{}</DivMission> */}
           </div>
           <div className="p-2">
-            <div className="tilte">
-              <h2>
-                <span className="">Notre vision</span>
-              </h2>
+            <div>
+              <div className="tilte">
+                <h2>
+                  <span className="m-1">Notre vision</span>
+                </h2>
+              </div>
+              <DivMission className="">{Vision}</DivMission>
             </div>
-            <div className="body m-2">{Vision}</div>
-          </div>
 
-          <div className="p-2">
-            <div className="tilte">
-              <h2>
-                <span className="">Notre Mission</span>
-              </h2>
+            <div>
+              <div className="tilte">
+                <h2>
+                  <span className="">Notre Mission</span>
+                </h2>
+              </div>
+              <DivMission className="">{Mission}</DivMission>
             </div>
-            <div className="body m-2">{Mission}</div>
           </div>
           <div className="br-buttom  m-1 "></div>
           <div className="text-left">

@@ -46,7 +46,6 @@ const Home = () => {
           <Carou partenaireData={partenaireData} />
         </div>
       </div>
-      ;
       <Actualities ActualitiesData={ActualitiesData} />
       <RecentActivities RecentActivitiesData={RecentActivitiesData} />
       <Footer FooterData={FooterData} />

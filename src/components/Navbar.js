@@ -22,7 +22,7 @@ const Navbar = ({ toggle }) => {
       <NavMenu>
         {MenuData.map((item, index) => (
           <NavMenuLinks to={item.link} key={index}>
-            {item.title}
+            <span> {item.title}</span>
           </NavMenuLinks>
         ))}
       </NavMenu>

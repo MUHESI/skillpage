@@ -12,6 +12,7 @@ export const Nav = styled.nav`
   width: 100%;
   color: white;
   background-color: #121e58; /* very important ! */
+  border-bottom: 1px solid #ffd103;
 `;
 
 export const NavLink = css`
@@ -48,14 +49,24 @@ export const MenuBars = styled(FaBars)`
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
+
   margin: -50px;
   @media screen and (max-width: 820px) {
     display: none;
+  }
+  span:hover {
   }
 `;
 
 export const NavMenuLinks = styled(Link)`
   ${NavLink}
+
+  &:hover {
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+    /* opacity: 0.7; */
+    color: #ffd103;
+  }
 `;
 
 export const NavBtn = styled.div`
