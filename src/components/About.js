@@ -17,7 +17,7 @@ const Aboutus = ({ WeAre, Vision, Mission, ImgAbout }) => {
             </div>
             <div className="img-card">
               <img
-                className="img-fluid br-rect-white  br-circle-15"
+                className="img-fluid br-rect-white  br-circle-10"
                 src={ImgAbout}
               />
             </div>

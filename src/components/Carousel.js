@@ -25,8 +25,6 @@ const Carou = ({ partenaireData }) => {
       <Carousel breakPoints={breakPoints}>
         {partenaireData.map((partenaire, index) => (
           <Item key={index}>
-            <h2></h2>
-
             <img
               className=""
               src={partenaire.img}

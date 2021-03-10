@@ -28,7 +28,7 @@ import { FooterData } from "../data/FooterData";
 const Home = () => {
   //const props = useSpring({ x: 100, from: { x: 0 } });
   return (
-    <>
+    <div>
       <GlobalStyle />
       <Hero slides={SliderData} />
       <Programs programs={ProgramsData} />
@@ -38,27 +38,20 @@ const Home = () => {
         Mission={data.aboutData[2].text}
         ImgAbout={ImgAbout}
       />
-      <div className="row p-4">
-        <div class="col-sm-12 col-md-6 col-lg-6">
+      <div className="row m-2">
+        <div className="col-sm-12 col-md-6 col-lg-6">
           <Partenaires data-aos="fade-up" />
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-6 p-3">
+        <div className="col-sm-12 col-md-6 col-lg-6 p-3">
           <Carou partenaireData={partenaireData} />
         </div>
       </div>
+
       <Actualities ActualitiesData={ActualitiesData} />
       <RecentActivities RecentActivitiesData={RecentActivitiesData} />
       <Footer FooterData={FooterData} />
-    </>
+    </div>
   );
 };
 
-//
-//   { const Home = useSpring({opacity: 1, from: {opacity: 0}}) return <animated.div style={props}>I will fade in</animated.div> }
-
 export default Home;
-/** Choses a importer !! 
-menu navbar!
-*/
-
-// ()   []  { }    `` #
