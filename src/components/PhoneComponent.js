@@ -2,14 +2,23 @@ import React from "react";
 import { connect } from "react-redux";
 import { buyPhone } from "../components/phone/actionPhone";
 
-function PhoneComponent({ PHONES }) {
+function PhoneComponent({ PHONES, BUYPHONE }) {
   return (
     <div>
       <h4>Phone Conponent</h4>
+      <div>
+        <p>
+          Disponible : <strong>{PHONES} </strong>
+        </p>
 
-      <p>
-        Disponible : <strong>{PHONES} </strong>
-      </p>
+        <button
+          onClick={() => {
+            BUYPHONE();
+          }}
+        >
+          Buy Phone
+        </button>
+      </div>
     </div>
   );
 }
@@ -22,7 +31,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    buyPhone: () => dispatch(buyPhone()),
+    BUYPHONE: () => dispatch(buyPhone()),
   };
 };
 

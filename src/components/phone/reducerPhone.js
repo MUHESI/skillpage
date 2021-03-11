@@ -7,9 +7,8 @@ const phoneReducer = (state = initialStatePhone, action) => {
     case BUY_PHONE:
       return {
         ...state,
-        phones: state.phones,
+        phones: state.phones - 1,
       };
-
       break;
 
     default:
