@@ -31,6 +31,7 @@ const Home = () => {
     <div>
       <GlobalStyle />
       <Hero slides={SliderData} />
+
       <Programs programs={ProgramsData} />
       <About
         WeAre={data.aboutData[0].text}

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./bootstrap.min.css";
 import "./App.css";
 import "./styleBloc.css";
+import { Provider } from "react-redux";
+import store from "./components/Store";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import styled from "styled-components";
@@ -25,15 +27,17 @@ const App = () => {
   //
 
   return (
-    <Router>
-      <Navbar toggle={toggle} />
-      <Dropdown IsOpen={IsOpen} toggle={toggle} />
-      <Switch>
-        <Route path="/" component={Home} exact></Route>
-        <Route path="/LeCres" component={LeCres}></Route>
-        <Route path="/innovations" component={Innovations}></Route>
-      </Switch>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Navbar toggle={toggle} />
+        <Dropdown IsOpen={IsOpen} toggle={toggle} />
+        <Switch>
+          <Route path="/" component={Home} exact></Route>
+          <Route path="/LeCres" component={LeCres}></Route>
+          <Route path="/innovations" component={Innovations}></Route>
+        </Switch>
+      </Router>
+    </Provider>
   );
 };
 
