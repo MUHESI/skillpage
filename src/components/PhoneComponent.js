@@ -1,38 +1,38 @@
 import React from "react";
-import { connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { buyPhone } from "../components/phone/actionPhone";
 
-function PhoneComponent({ PHONES, BUYPHONE }) {
+function PhoneComponent() {
+  const PHONES = useSelector((state) => state.phones);
+  const dispatch = useDispatch();
   return (
     <div>
       <h4>Phone Conponent</h4>
       <div>
         <p>
-          Disponible : <strong>{PHONES} </strong>
+          Disponible : <strong> {PHONES} </strong>
         </p>
 
-        <button
-          onClick={() => {
-            BUYPHONE();
-          }}
-        >
+        <button className="btn btn-primary" onClick={dispatch(buyPhone)}>
           Buy Phone
         </button>
       </div>
     </div>
   );
 }
-const mapStateToProps = (state) => {
-  //   console.log(props);
-  return {
-    PHONES: state.phones,
-  };
-};
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    BUYPHONE: () => dispatch(buyPhone()),
-  };
-};
+// const mapStateToProps = (state) => {
+//   return {
+//     PHONES: state.phones,
+//   };
+// };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PhoneComponent);
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     BUYPHONE: () => dispatch(buyPhone()),
+//   };
+// };
+
+//  export default connect(mapStateToProps, mapDispatchToProps)(PhoneComponent);
+
+export default PhoneComponent;
