@@ -1,6 +1,13 @@
-import { createStore } from "redux";
+import { createStore, combineReducers } from "redux";
 
-import phoneReducer from "./phone/reducerPhone";
+import tvReducer from "./redux/reducerTv";
 
-const store = createStore(phoneReducer);
+import phoneReducer from "./redux/reducerPhone";
+
+const rootReducer = combineReducers({
+  telephones: phoneReducer,
+  television: tvReducer,
+});
+
+const store = createStore(rootReducer);
 export default store;

@@ -1,24 +1,25 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { buyPhone } from "./redux/actionPhone";
+import { buyTV } from "./redux/actionTv";
 
-function PhoneComponent() {
-  const PHONES = useSelector((state) => state.telephones.phones);
+function TvContenair() {
+  //   const television = useSelector((state) => state.tv.phones);
+  const television = useSelector((state) => state.television.tv);
   const dispatch = useDispatch();
   return (
     <div>
-      <h4>Phone Conponent</h4>
+      <h4>TV Conponent TV</h4>
       <div>
         <p>
-          Disponible : <strong> {PHONES} </strong>
+          Disponible : <strong> {television} </strong>
         </p>
         <button
           className="btn btn-primary"
           onClick={() => {
-            dispatch(buyPhone());
+            dispatch(buyTV());
           }}
         >
-          Buy Phone
+          Buy televison
         </button>
       </div>
     </div>
@@ -39,4 +40,4 @@ function PhoneComponent() {
 
 //  export default connect(mapStateToProps, mapDispatchToProps)(PhoneComponent);
 
-export default PhoneComponent;
+export default TvContenair;

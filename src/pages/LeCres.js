@@ -24,7 +24,8 @@ import { CoordinationAdmin } from "../data/CoordinationData";
 
 const LeCres = () => {
   return (
-    <div className=" p-2">
+    // <div className=" p-2" data-aos="fade-left">
+    <div className=" p-2" data-aos="">
       <HeroLeCres slides={SliderLeCresData} />
       <MissionVisionAbout
         MISSION={dataMission.MissiontData[0].text}

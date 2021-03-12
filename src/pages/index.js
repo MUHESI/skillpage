@@ -28,7 +28,8 @@ import { FooterData } from "../data/FooterData";
 const Home = () => {
   //const props = useSpring({ x: 100, from: { x: 0 } });
   return (
-    <div>
+    // <div className="p-2" data-aos="flip-left">
+    <div className="p-2" data-aos="">
       <GlobalStyle />
       <Hero slides={SliderData} />
 

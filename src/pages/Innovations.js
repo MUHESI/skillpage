@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { ProgramsData } from "../data/ProgramsData";
 import PhoneComponent from "../components/PhoneComponent";
+import TvContenair from "../components/TvContenair";
+
 import { Box } from "../styledComponets/CresStyled";
 
 const Innovations = () => {
@@ -11,6 +13,7 @@ const Innovations = () => {
       </Box>
 
       <PhoneComponent />
+      <TvContenair />
     </>
   );
 };
