@@ -25,10 +25,10 @@ function Comments({ apiData, apiComment }) {
   );
 
   return (
-    <div>
+    <React.Fragment>
       <h2>HELLO</h2>
       {displayApiData}
-    </div>
+    </React.Fragment>
   );
 }
 
