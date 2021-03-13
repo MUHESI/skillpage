@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ProgramsData } from "../data/ProgramsData";
 import PhoneComponent from "../components/PhoneComponent";
 import TvContenair from "../components/TvContenair";
+import Comments from "../components/Comments";
 
 import { Box } from "../styledComponets/CresStyled";
 
@@ -14,6 +15,7 @@ const Innovations = () => {
 
       <PhoneComponent />
       <TvContenair />
+      <Comments />
     </>
   );
 };

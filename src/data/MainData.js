@@ -15,4 +15,9 @@ export const MainData = {
   ],
   phones: 25,
   tv: 30,
+  comments: {
+    isLoding: false,
+    comments: [],
+    error: "",
+  },
 };
