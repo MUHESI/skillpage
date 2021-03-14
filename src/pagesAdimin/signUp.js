@@ -27,7 +27,7 @@ function SignUp(props) {
       .signUpUser(email, password)
       .then((user) => {
         setloginData({ ...data }); //va vider les values dans les inputs du formulaire
-        props.history.push("/index");
+        props.history.push("/index"); // Redirection to index paage
       })
       .catch((error) => {
         setError(error);

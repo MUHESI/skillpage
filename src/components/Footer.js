@@ -21,7 +21,7 @@ const Footer = ({ FooterData }) => {
               <li>{elt.element} </li>
             ))}
 
-            <Link className="" to="/SignUp">
+            <Link className="" to="/SignIn">
               Connexion
             </Link>
           </ul>
