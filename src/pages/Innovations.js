@@ -14,7 +14,7 @@ const Innovations = () => {
     <>
       <PhoneComponent />
       <TvContenair />
-      <Comments />
+      {/* <Comments /> */}
       <hr />
       <SignUp />
     </>

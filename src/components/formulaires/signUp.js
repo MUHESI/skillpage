@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { FirebaseContext } from "../../backend";
 
 function SignUp() {
   const data = {
@@ -7,31 +8,51 @@ function SignUp() {
     password: "",
     confirmerpassword: "",
   };
+  const firebase = useContext(FirebaseContext);
+
   const [loginData, setloginData] = useState(data);
+  const [error, setError] = useState("");
 
   const hunldeChange = (e) => {
     setloginData({ ...loginData, [e.target.id]: e.target.value }); // Engeniosité élevée
   };
 
+  const hundleSubmit = (e) => {
+    e.preventDefault();
+    const { email, password } = loginData;
+    firebase
+      .signUpUser(email, password)
+      .then((user) => {
+        setloginData({ ...data });
+      })
+      .catch((error) => {
+        setError(error);
+        setloginData({ ...data });
+      });
+  };
   const { pseudo, email, password, confirmerpassword } = loginData;
   const btn =
     pseudo === "" ||
     email === "" ||
     password === "" ||
     password != confirmerpassword ? (
-      <button type="button" class="btn btn-primary" disabled>
+      <button class="btn btn-primary" disabled>
         Inscription
       </button>
     ) : (
-      <button type="button" class="btn btn-secondary">
-        Inscription Now
-      </button>
+      <button class="btn btn-secondary">Inscription Now</button>
     );
+
+  //Gestion Error
+  const ErrorMessage = error !== "" && <span>{error.message} </span>;
 
   return (
     <div>
+      {}
       <h2>Inscription</h2>
-      <form>
+      {ErrorMessage}
+
+      <form onSubmit={hundleSubmit}>
         <div className="form">
           <input
             type="text"
