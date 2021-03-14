@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Footer = ({ FooterData }) => {
   const CRES = FooterData.CRES;
   const programmes = FooterData.programmes;
@@ -20,6 +20,10 @@ const Footer = ({ FooterData }) => {
             {CRES.map((elt, v) => (
               <li>{elt.element} </li>
             ))}
+
+            <Link className="" to="/SignUp">
+              Connexion
+            </Link>
           </ul>
         </div>
         <div class="col-sm-6 col-md-3 col-lg-3 br-right p-4">

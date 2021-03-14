@@ -15,6 +15,10 @@ import Home from "./pages";
 import LeCres from "./pages/LeCres";
 import Innovations from "./pages/Innovations";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// adiministration pages
+import HomeAdmin from "./pagesAdimin";
+import SignUp from "./pagesAdimin/signUp";
+import SignIn from "./pagesAdimin/signIn";
 
 const App = () => {
   useEffect(() => {
@@ -35,6 +39,10 @@ const App = () => {
           <Route path="/" component={Home} exact></Route>
           <Route path="/LeCres" component={LeCres}></Route>
           <Route path="/innovations" component={Innovations}></Route>
+          {/* Partie Administration */}
+          <Route path="/index" component={HomeAdmin}></Route>
+          <Route path="/signUp" component={SignUp}></Route>
+          <Route path="/signIn" component={SignIn}></Route>
         </Switch>
       </Router>
     </Provider>
